@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+}
+.body{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.6rem;
+    background-color: #F0EEED;
+    color: #332C39;
+}
+.title{
+    padding-bottom: 3rem;
+}
+.wrapper{
+    margin: 10rem auto;
+    max-width: 50rem;
+}
+.dropdown{
+    list-style: none;
+}
+.dropdown__item{
+    border-top: 1px solid #332C39;
+    border-bottom: 1px solid #332C39;
+}
+.dropdown__item-name{
+    padding-top: 1rem;
+    font-size: 2rem;
+    font-weight: 600;
+}
+.dropdown__item-title{
+    display: flex;
+    padding-bottom: 2rem;
+    justify-content: space-between;
+    align-items: center;
+}
