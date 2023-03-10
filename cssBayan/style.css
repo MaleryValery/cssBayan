@@ -223,9 +223,10 @@ html {
         cursor: pointer;
     }
 
-    .accordion__item-label:hover {
+    .accordion__item-label:hover .accordion__item-ico {
         color: #332C39;
         cursor: pointer;
+        transform: rotate(90deg);
     }
 
     .accordion__item-label:hover .accordion__item-content {
@@ -235,5 +236,6 @@ html {
         visibility: visible;
         justify-content: center;
     }
+ 
 
 }
