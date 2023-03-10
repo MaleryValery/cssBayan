@@ -10,14 +10,14 @@ html {
 
 .body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 1.2rem;
+    font-size: 2.2rem;
     background-color: #F0EEED;
     color: #2862b4;
-    height: 100vh;
 
 }
 
 .title {
+    font-size: 3rem;
     padding-bottom: 3rem;
     border-bottom: 1px solid #332C39;
     color: #332C39;
@@ -25,7 +25,7 @@ html {
 
 .wrapper {
     margin: 10rem auto;
-    max-width: 55rem;
+    max-width: 60rem;
 
 }
 
@@ -42,12 +42,12 @@ html {
 .accordion__item-label {
     padding: 2rem 0;
     position: relative;
-    font-size: 2rem;
+    font-size: 2.4rem;
     font-weight: 600;
     display: block;
     transition: all 0.5s ease-out;
     width: 100%;
-    
+
 }
 
 .accordion__title-conteiner {
@@ -74,15 +74,12 @@ html {
 }
 
 .accordion__item-mark {
-    position: absolute;
-    opacity: 0;
-    width: 0;
-    height: 0;
-
+    display: none;
 }
 
 .accordion__item-content {
-    display: block;
+    display: flex;
+    justify-content: center;
     max-height: 0;
     opacity: 0;
     visibility: hidden;
@@ -92,71 +89,123 @@ html {
 /* *************************************** */
 
 .accordion__item-mark:checked~.accordion__item-content {
-    display: block;
+    display: flex;
     max-height: 30rem;
     opacity: 1;
     visibility: visible;
+    justify-content: center;
 }
 
 .accordion__item-mark:checked~.accordion__title-conteiner .accordion__item-ico {
     transform: rotate(90deg)
 }
+
 .accordion__item-mark:checked~.accordion__title-conteiner {
-   color: #332C39;
+    color: #332C39;
 }
 
 /* .accordion .accordion__item-label+.accordion__item-mark:checked+.accordion__item-img {
     max-height: 30rem;
 } */
 
+.fifth-meme,
+.fourth-meme,
+.third-meme,
+.second-meme,
 .first-meme {
-    display: inline-block;
+    display: block;
     width: 30rem;
     height: 30rem;
-    background-image: url(./img/deadline.svg);
     background-size: cover;
+}
 
+.first-meme {
+    background-image: url(./img/deadline.svg);
 }
 
 .second-meme {
-    display: block;
-    width: 30rem;
-    height: 30rem;
     background-image: url(./img/error.svg);
-    background-size: cover;
 }
 
 .third-meme {
-    display: block;
-    width: 30rem;
-    height: 30rem;
     background-image: url(./img/everything-works.svg);
-    background-size: contain;
-    background-repeat: no-repeat;
 }
 
 .fourth-meme {
-    display: block;
-    width: 30rem;
-    height: 30rem;
     background-image: url(./img/junior.svg);
-    background-size: contain;
-    background-repeat: no-repeat;
+
 }
 
 .fifth-meme {
-    display: block;
-    width: 30rem;
-    height: 30rem;
     background-image: url(./img/so-little-work-i-done.svg);
-    background-size: cover;
 }
 
 /* *************************************** */
+@media screen and (min-width:300px) {
+    .wrapper {
+        padding: 0 1rem;
+    }
+
+    .accordion__item-label {
+        font-size: 1.8rem;
+    }
+
+    .title {
+        font-size: 2rem;
+    }
+
+    .fifth-meme,
+    .fourth-meme,
+    .third-meme,
+    .second-meme,
+    .first-meme {
+        width: 20rem;
+        height: 20rem;
+    }
+}
+
+@media screen and (min-width:450px) {
+    .wrapper {
+        padding: 0 2rem;
+    }
+
+    .accordion__item-label {
+        font-size: 2rem;
+    }
+
+    .title {
+        font-size: 2.6rem;
+    }
+}
+
+@media screen and (min-width:480px) {
+    .wrapper {
+        padding: 0 3rem;
+    }
+
+}
+
+@media screen and (min-width:820px) {
+    .accordion__item-label {
+        font-size: 2.6rem;
+    }
+
+    .title {
+        font-size: 3.2rem;
+    }
+}
 
 @media screen and (min-width:1920px) {
     .body {
         font-size: 1.6rem;
+    }
+
+    .title {
+        font-size: 4rem;
+    }
+
+    .accordion__item-label {
+        font-size: 3rem;
     }
 
     .accordion:hover {
@@ -173,4 +222,18 @@ html {
         color: #332C39;
         cursor: pointer;
     }
+
+    .accordion__item-label:hover {
+        color: #332C39;
+        cursor: pointer;
+    }
+
+    .accordion__item-label:hover .accordion__item-content {
+        display: flex;
+        max-height: 30rem;
+        opacity: 1;
+        visibility: visible;
+        justify-content: center;
+    }
+
 }
