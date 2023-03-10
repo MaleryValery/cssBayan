@@ -1,97 +1,163 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-html{
+
+html {
     font-size: 62.5%;
 }
-.body{
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 1.6rem;
+
+.body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.2rem;
     background-color: #F0EEED;
     color: #332C39;
+    height: 100vh;
+
 }
-.title{
+
+.title {
     padding-bottom: 3rem;
     border-bottom: 1px solid #332C39;
 }
-.wrapper{
+
+.wrapper {
     margin: 10rem auto;
-    max-width: 50rem;
+    max-width: 55rem;
+
 }
-.dropdown{
+
+.accordion {
     list-style: none;
+    overflow: hidden;
 }
-.dropdown__item{
+
+.accordion__item {
+    padding: 2rem 0;
     border-bottom: 1px solid #332C39;
+    
 }
-.dropdown__item-name{
-    padding-top: 2rem;
+
+.accordion__item-label {
+    position: relative;
     font-size: 2rem;
     font-weight: 600;
-   
+    display: block;
+    transition: all 0.5s ease-out;
+    width: 100%;
+    
 }
-.dropdown__item-name span{
+.accordion__title-conteiner{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    
+}
+ .accordion__item-ico {
     display: inline-block;
+    opacity: 1;
     transform: rotate(45deg);
     margin-left: 1rem;
+    transition:all .6s ease-out;
+    text-align: right;
 }
-.dropdown__item-title{
+
+.accordion__item-title {
     display: flex;
-    padding-bottom: 2rem;
+    /* padding-bottom: 2rem; */
     justify-content: space-between;
     align-items: center;
 }
-.dropdown__item-mark{
-    display: none;
-}
-.dropdown__item-img{
-    padding-bottom: 2rem;
-}
+.accordion__item-mark{
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
 
+}
+.accordion__item-content{
+    /* display: none; */
+    max-height: 0;
+    opacity: 0;
+}
 /* *************************************** */
-.dropdown__item-img{
+
+.accordion__item-mark:checked ~ .accordion__item-content {
     display: block;
-    margin-bottom: 1rem; 
+    max-height: 30rem;
+    opacity: 1;
 }
 
-.first-meme{ 
+.accordion__item-mark:checked ~ .accordion__title-conteiner .accordion__item-ico {
+    transform: rotate(90deg)
+}
+
+.accordion .accordion__item-label+.accordion__item-mark:checked+.accordion__item-img {
+    max-height: 30rem;
+}
+
+.first-meme {
     display: inline-block;
     width: 30rem;
     height: 30rem;
-    background-image: url(./img/1.jpeg);
+    background-image: url(./img/deadline.svg);
     background-size: cover;
 
 }
-.second-meme{
+
+.second-meme {
     display: block;
     width: 30rem;
     height: 30rem;
-    background-image: url(./img/2.png);
+    background-image: url(./img/error.svg);
     background-size: cover;
 }
-.third-meme{
+
+.third-meme {
     display: block;
     width: 30rem;
-    height: 40rem;
-    background-image: url(./img/3.jpeg);
+    height: 30rem;
+    background-image: url(./img/everything-works.svg);
     background-size: contain;
     background-repeat: no-repeat;
 }
-.fourth-meme{
-    display: block;
-    width: 40rem;
-    height: 30rem;
-    background-image: url(./img/4.webp);
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-.fifth-meme{
+
+.fourth-meme {
     display: block;
     width: 30rem;
     height: 30rem;
-    background-image: url(./img/5.webp);
+    background-image: url(./img/junior.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.fifth-meme {
+    display: block;
+    width: 30rem;
+    height: 30rem;
+    background-image: url(./img/so-little-work-i-done.svg);
     background-size: cover;
 }
+
 /* *************************************** */
+
+@media screen and (min-width:1920px) {
+    .body {
+        font-size: 1.6rem;
+    }
+
+    .accordion:hover {
+        color: #804674;
+        cursor: pointer;
+    }
+
+    .accordion:hover .accordion__item-ico {
+        opacity: 1;
+        transition: all 0.6s;
+    }
+    .accordion__item-label:hover {
+        color: #804674;
+        cursor: pointer;
+}
+}
