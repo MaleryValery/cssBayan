@@ -12,7 +12,7 @@ html {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 1.2rem;
     background-color: #F0EEED;
-    color: #332C39;
+    color: #2862b4;
     height: 100vh;
 
 }
@@ -20,6 +20,7 @@ html {
 .title {
     padding-bottom: 3rem;
     border-bottom: 1px solid #332C39;
+    color: #332C39;
 }
 
 .wrapper {
@@ -34,12 +35,12 @@ html {
 }
 
 .accordion__item {
-    padding: 2rem 0;
     border-bottom: 1px solid #332C39;
-    
+
 }
 
 .accordion__item-label {
+    padding: 2rem 0;
     position: relative;
     font-size: 2rem;
     font-weight: 600;
@@ -48,18 +49,20 @@ html {
     width: 100%;
     
 }
-.accordion__title-conteiner{
+
+.accordion__title-conteiner {
     display: flex;
     width: 100%;
     justify-content: space-between;
-    
+
 }
- .accordion__item-ico {
+
+.accordion__item-ico {
     display: inline-block;
-    opacity: 1;
+    opacity: 0;
     transform: rotate(45deg);
     margin-left: 1rem;
-    transition:all .6s ease-out;
+    transition: all .4s ease-out;
     text-align: right;
 }
 
@@ -69,33 +72,42 @@ html {
     justify-content: space-between;
     align-items: center;
 }
-.accordion__item-mark{
+
+.accordion__item-mark {
     position: absolute;
     opacity: 0;
     width: 0;
     height: 0;
 
 }
-.accordion__item-content{
-    /* display: none; */
+
+.accordion__item-content {
+    display: block;
     max-height: 0;
     opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s ease-in-out;
 }
+
 /* *************************************** */
 
-.accordion__item-mark:checked ~ .accordion__item-content {
+.accordion__item-mark:checked~.accordion__item-content {
     display: block;
     max-height: 30rem;
     opacity: 1;
+    visibility: visible;
 }
 
-.accordion__item-mark:checked ~ .accordion__title-conteiner .accordion__item-ico {
+.accordion__item-mark:checked~.accordion__title-conteiner .accordion__item-ico {
     transform: rotate(90deg)
 }
-
-.accordion .accordion__item-label+.accordion__item-mark:checked+.accordion__item-img {
-    max-height: 30rem;
+.accordion__item-mark:checked~.accordion__title-conteiner {
+   color: #332C39;
 }
+
+/* .accordion .accordion__item-label+.accordion__item-mark:checked+.accordion__item-img {
+    max-height: 30rem;
+} */
 
 .first-meme {
     display: inline-block;
@@ -148,16 +160,17 @@ html {
     }
 
     .accordion:hover {
-        color: #804674;
+        color: #332C39;
         cursor: pointer;
     }
 
     .accordion:hover .accordion__item-ico {
         opacity: 1;
-        transition: all 0.6s;
+        transition: all 0.4s;
     }
+
     .accordion__item-label:hover {
-        color: #804674;
+        color: #332C39;
         cursor: pointer;
-}
+    }
 }
