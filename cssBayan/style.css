@@ -255,6 +255,25 @@ html {
         visibility: visible;
         justify-content: center;
     }
+    
+    .accordion__item-label:active .accordion__item-content {
+        display: flex;
+        max-height: 30rem;
+        opacity: 0.8;
+        transform: scale(1.05);
+        visibility: visible;
+        justify-content: center;
+    }
+    .accordion__item-label:active .accordion__item-ico {
+        color: #2862b4;
+        opacity: 0.8;
+    }
+ 
+    .accordion__item-label:active {
+        color: #2862b4;
+        opacity: 0.8;
+    }
+
  
 
 }
