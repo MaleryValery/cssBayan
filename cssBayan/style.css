@@ -59,7 +59,7 @@ html {
 
 .accordion__item-ico {
     display: inline-block;
-    opacity: 0;
+    opacity: 1;
     transform: rotate(45deg);
     margin-left: 1rem;
     transition: all .4s ease-out;
@@ -114,9 +114,10 @@ html {
 .second-meme,
 .first-meme {
     display: block;
-    width: 30rem;
-    height: 30rem;
-    background-size: cover;
+    width: 20rem;
+    height: 20rem;
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
 .first-meme {
@@ -152,15 +153,6 @@ html {
 
     .title {
         font-size: 2rem;
-    }
-
-    .fifth-meme,
-    .fourth-meme,
-    .third-meme,
-    .second-meme,
-    .first-meme {
-        width: 20rem;
-        height: 20rem;
     }
 }
 
@@ -207,7 +199,18 @@ html {
     .accordion__item-label {
         font-size: 3rem;
     }
-
+    .accordion__item-ico {
+        display: inline-block;
+        opacity: 0;
+    }
+    .fifth-meme,
+    .fourth-meme,
+    .third-meme,
+    .second-meme,
+    .first-meme {
+        width: 30rem;
+        height: 30rem;
+    }
     .accordion:hover {
         color: #332C39;
         cursor: pointer;
