@@ -10,7 +10,7 @@ html {
 
 .body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 2.2rem;
+    font-size: 1.6rem;
     background-color: #F0EEED;
     color: #2862b4;
 
@@ -42,7 +42,7 @@ html {
 .accordion__item-label {
     padding: 2rem 0;
     position: relative;
-    font-size: 2.4rem;
+    font-size: 1.4rem;
     font-weight: 600;
     display: block;
     transition: all 0.5s ease-out;
@@ -142,7 +142,21 @@ html {
 }
 
 /* *************************************** */
-@media screen and (min-width:300px) {
+@media screen and (min-width:220px) {
+    .wrapper {
+        padding: 0 1rem;
+    }
+
+    /* .accordion__item-label {
+        font-size: 1.8rem;
+    }
+
+    .title {
+        font-size: 2rem;
+    }
+ */
+}
+@media screen and (min-width:320px) {
     .wrapper {
         padding: 0 1rem;
     }
@@ -154,8 +168,8 @@ html {
     .title {
         font-size: 2rem;
     }
-}
 
+}
 @media screen and (min-width:450px) {
     .wrapper {
         padding: 0 2rem;
