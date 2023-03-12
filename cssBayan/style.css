@@ -19,7 +19,7 @@ html {
 .title {
     font-size: 3rem;
     padding-bottom: 3rem;
-    border-bottom: 1px solid #332C39;
+    border-bottom: 0.1rem solid #332C39;
     color: #332C39;
 }
 
@@ -35,7 +35,7 @@ html {
 }
 
 .accordion__item {
-    border-bottom: 1px solid #332C39;
+    border-bottom: 0.1rem solid #332C39;
 
 }
 
@@ -143,6 +143,25 @@ html {
     background-image: url(./img/so-little-work-i-done.svg);
 }
 
+.accordion__item-label:active .accordion__item-content {
+    display: flex;
+    max-height: 30rem;
+    opacity: 0.8;
+    transform: scale(1.05);
+    visibility: visible;
+    justify-content: center;
+}
+
+.accordion__item-label:active .accordion__item-ico {
+    color: #2862b4;
+    opacity: 0.8;
+}
+
+.accordion__item-label:active .accordion__item-name {
+    color: #2862b4;
+    opacity: 0.8;
+}
+
 /* *************************************** */
 @media screen and (min-width:220px) {
     .wrapper {
@@ -158,6 +177,7 @@ html {
     }
  */
 }
+
 @media screen and (min-width:320px) {
     .wrapper {
         padding: 0 1rem;
@@ -172,6 +192,7 @@ html {
     }
 
 }
+
 @media screen and (min-width:450px) {
     .wrapper {
         padding: 0 2rem;
@@ -203,7 +224,7 @@ html {
     }
 }
 
-@media screen and (min-width:1920px) {
+@media screen and (min-width:1160px) {
     .body {
         font-size: 1.6rem;
     }
@@ -215,10 +236,12 @@ html {
     .accordion__item-label {
         font-size: 3rem;
     }
+
     .accordion__item-ico {
         display: inline-block;
-        opacity: 0;
+        opacity: 1;
     }
+
     .fifth-meme,
     .fourth-meme,
     .third-meme,
@@ -227,6 +250,33 @@ html {
         width: 30rem;
         height: 30rem;
     }
+
+    .accordion__item-label:active .accordion__item-content {
+        display: flex;
+        max-height: 30rem;
+        opacity: 0.8;
+        transform: scale(1.05);
+        visibility: visible;
+        justify-content: center;
+    }
+
+    .accordion__item-label:active .accordion__item-ico {
+        color: #2862b4;
+        opacity: 0.8;
+    }
+
+    .accordion__item-label:active {
+        color: #2862b4;
+        opacity: 0.8;
+    }
+}
+
+@media (hover: hover) {
+    .accordion__item-ico {
+        display: inline-block;
+        opacity: 0;
+    }
+
     .accordion:hover {
         color: #332C39;
         cursor: pointer;
@@ -255,7 +305,7 @@ html {
         visibility: visible;
         justify-content: center;
     }
-    
+
     .accordion__item-label:active .accordion__item-content {
         display: flex;
         max-height: 30rem;
@@ -264,16 +314,15 @@ html {
         visibility: visible;
         justify-content: center;
     }
+
     .accordion__item-label:active .accordion__item-ico {
         color: #2862b4;
         opacity: 0.8;
     }
- 
+
     .accordion__item-label:active {
         color: #2862b4;
         opacity: 0.8;
     }
-
- 
 
 }
